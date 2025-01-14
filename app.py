@@ -260,10 +260,8 @@ with st.expander('Clique aqui para aplicar a Matriz de Causa e Efeito'):
 
     colunas = []
     for i in range(num_colunas):
-        colunas.append(
-            st.text_input(f"Digite o título da coluna {
-                i + 1}:", value=f"Coluna {i + 1}")
-        )
+        colunas.append(st.text_input(
+            f"Digite o título da coluna {i + 1}:", value=f"Coluna {i + 1}"))
 
     # Construção da matriz como DataFrame
     if problema_priorizados_ishikawa and colunas:
