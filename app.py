@@ -1,14 +1,15 @@
-import sys
-import streamlit as st
-import os
-from crewai_tools import FileReadTool
-from langchain_cohere import ChatCohere
-from crewai import Agent, Task, Crew
-import pandas as pd
+import sqlite3
 from dotenv import load_dotenv
-
+import pandas as pd
+from crewai import Agent, Task, Crew
+from langchain_cohere import ChatCohere
+from crewai_tools import FileReadTool
+import os
+import streamlit as st
+import sys
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 # Configuração de variáveis de ambiente
 os.environ["COHERE_API_KEY"] = 'Sid93B0NN5Vc3luKBnbaD07IYTj93V1HGix5nDEe'
