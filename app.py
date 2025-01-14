@@ -6,6 +6,7 @@ from langchain_cohere import ChatCohere
 from crewai import Agent, Task, Crew
 import pandas as pd
 from dotenv import load_dotenv
+import sqlite3
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
