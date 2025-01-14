@@ -4,11 +4,14 @@ from crewai_tools import FileReadTool
 from langchain_cohere import ChatCohere
 from crewai import Agent, Task, Crew
 import pandas as pd
+from dotenv import load_dotenv
 
 # Configuração de variáveis de ambiente
 os.environ["COHERE_API_KEY"] = 'Sid93B0NN5Vc3luKBnbaD07IYTj93V1HGix5nDEe'
-os.environ["OPENAI_API_KEY"] = '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'
 os.environ["SERPER_API_KEY"] = '52d11d82675319c2143361c8584d7af496e78cf4'
+
+# Configuração de variáveis de ambiente
+load_dotenv()
 
 # Modelo LLM
 llm = ChatCohere(temperature=0.9)
