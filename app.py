@@ -1,4 +1,4 @@
-import sqlite3
+import pysqlite3 as sqlite3
 from dotenv import load_dotenv
 import pandas as pd
 from crewai import Agent, Task, Crew
