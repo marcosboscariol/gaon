@@ -1,4 +1,4 @@
-import sqlite3
+
 from dotenv import load_dotenv
 import pandas as pd
 from crewai import Agent, Task, Crew
@@ -6,14 +6,10 @@ from langchain_cohere import ChatCohere
 from crewai_tools import FileReadTool
 import os
 import streamlit as st
-import sys
-__import__('pysqlite3')
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 
 # Configuração de variáveis de ambiente
 os.environ["COHERE_API_KEY"] = 'Sid93B0NN5Vc3luKBnbaD07IYTj93V1HGix5nDEe'
-os.environ["OPENAI_API_KEY"] = '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'
 os.environ["SERPER_API_KEY"] = '52d11d82675319c2143361c8584d7af496e78cf4'
 
 # Modelo LLM
